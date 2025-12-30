@@ -1,99 +1,66 @@
-# 👁️ AI-Yama: The Soul Reader (Emotion Detection)
+# 👹 AI-Yama: The Biometric Judgment Suite
 
-> *"The face is but a mask, yet the eyes betray the soul. AI-Yama looks past the surface to reveal the turbulent emotions hidden within."*
+> *"In the Grand Hall of Justice, nothing is hidden. One eye sees the timeline of your life (Age & Gender), while the other peers into the turbulence of your heart (Emotion)."*
 
 ![Project Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
-![FER-2013](https://img.shields.io/badge/Dataset-FER--2013-yellow)
+![TensorFlow](https://img.shields.io/badge/Suite-Deep%20Learning-orange)
 
 ---
 
-## 📜 The Legend (Introduction)
-In the court of Yama, judgment isn't passed just on facts, but on the *intent* and *feeling* behind actions. **AI-Yama (Emotion Edition)** extends the omniscience of the original biometric system. It does not just ask "Who are you?", but "How do you feel?"
+## 🏛️ The Grand Archive (Overview)
+**AI-Yama** is a comprehensive computer vision suite designed to extract deep biological and psychological attributes from human faces.
 
-By analyzing subtle micro-expressions and facial muscle movements, this deep learning model classifies the human emotional state into one of seven distinct "Rasas" (Emotions):
-* **Angry** 😡
-* **Disgust** 🤢
-* **Fear** 😨
-* **Happy** 😊
-* **Sad** 😢
-* **Surprise** 😲
-* **Neutral** 😐
+This repository serves as the central hub for two distinct deep learning systems, each acting as a specialized "judge" of human characteristics. By leveraging Multi-Task Learning and Convolutional Neural Networks, this suite transforms a simple camera feed into a tool of omniscience.
 
 ---
 
-## 🧠 The "Third Eye" Architecture (Model)
-To perceive emotions that often fleet across a face in milliseconds, AI-Yama utilizes a specialized **Convolutional Neural Network (CNN)** optimized for feature extraction from low-resolution inputs.
+## 🔮 The Two Eyes of Yama (Modules)
 
-1.  **The Gaze (Input):** Processes 48x48 pixel grayscale images (from the FER-2013 standard).
-2.  **The Insight (Deep Layers):**
-    * **Convolutional Blocks:** Four distinct blocks with Batch Normalization and Max Pooling to capture edges (eyebrows, lips) and textures (wrinkles).
-    * **Dropout Layers:** Randomly deactivates neurons during training to prevent "hallucinations" (overfitting).
-3.  **The Judgment (Softmax Output):** A final dense layer calculates the probability distribution across the 7 emotional classes.
+### 1. [The All-Seeing Face Analyst (Age & Gender)](./Age-Gender-Detection)
+> *folder: `Age-Gender-Detection/`*
 
-<img width="373" height="135" alt="image" src="https://github.com/user-attachments/assets/8d0ee13b-f97f-42a2-bd02-64696a954077" />
+A **Multi-Task Learning (MTL)** system that simultaneously predicts biological age and gender from a single image.
+* **Capabilities:** Age Regression (Years), Gender Classification (Male/Female).
+* **Tech:** Multi-Output CNN, Shared Backbone, UTKFace Dataset.
+* **[🔗 Enter the Hall of Age & Gender](./Age-Gender-Detection)**
 
+### 2. [The Soul Reader (Emotion Detection)](./Emotion-Detection)
+> *folder: `Emotion-Detection/`*
+
+A specialized **CNN Classifier** tuned to detect micro-expressions and reveal the subject's emotional state.
+* **Capabilities:** Detects 7 core emotions (Angry, Happy, Sad, Fear, Disgust, Surprise, Neutral).
+* **Tech:** VGG-style Deep CNN, FER-2013 Dataset.
+* **[🔗 Enter the Hall of Emotions](./Emotion-Detection)**
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Unified Tech Stack
+Both systems share a robust, modern foundation:
 * **Core:** Python 3.x
-* **Neural Network:** TensorFlow / Keras
-* **Computer Vision:** OpenCV (Haar Cascades for face localization)
-* **Dataset:** FER-2013 (Facial Expression Recognition)
-* **Interface:** Real-Time Webcam Bridge (JavaScript/Python)
+* **Deep Learning:** TensorFlow / Keras
+* **Computer Vision:** OpenCV (Haar Cascades)
+* **Deployment:** JavaScript-Python Bridge for Real-Time Cloud Inference (Google Colab).
 
 ---
 
-## ⚡ Instant Insight (Using Pre-Trained Model)
-If you wish to test the Seer immediately without retraining the neural pathways:
+## 🚀 How to Navigate (Installation)
 
-Ensure `Emotion_model.keras` is in your directory and run:
+To use either tool, clone this entire repository and navigate to the specific module you wish to summon.
 
-```python
-import tensorflow as tf
-import numpy as np
-
-# Load the emotion model
-try:
-    model = tf.keras.models.load_model('emotion_model.h5')
-    print("Success! The Third Eye is open.")
-except Exception as e:
-    print(f"Vision blocked: {e}")
-```
-
----
-
-## 🚀 How to Summon the Soul Reader (Installation)
-
-### 1. Clone the Repository
 ```bash
-git clone [https://github.com/lovevyas/AI-Yama.git]
-cd AI-Yama-Emotion
-```
+# 1. Clone the Grand Archive
+git clone [https://github.com/lovevyas/AI-Yama.git](https://github.com/lovevyas/AI-Yama.git)
+cd AI-Yama
 
-### 2. Install Dependencies
-```bash
-pip install tensorflow pandas numpy matplotlib opencv-python
-```
+# 2. Choose your path:
 
-### 3. Run the Ritual
-Open the notebook `Emotion_Detection_Code.ipynb` in **Google Colab**.
-* **Training:** Run the training cells to teach Yama using the FER-2013 dataset.
-* **Live Judgment:** Execute the final **Webcam Bridge** cell to see your emotions classified in real-time video.
+# --- To Judge Age & Gender ---
+cd Age-Gender-Detection
+# Follow the README inside this folder...
 
----
+# --- OR ---
 
-## 📊 Performance Metrics
-* **Training Accuracy:** ~70% (State-of-the-art for FER-2013 raw data is typically 70-75%).
-* **Real-Time Latency:** < 50ms per frame.
-
----
-
-## 👤 Author
-**Love Vyas**
-* [LinkedIn](https://www.linkedin.com/in/love-vyas)
-* [GitHub](https://github.com/lovevyas)
-
-> *"The mind is restless, Krishna, turbulent, strong and unyielding." — Bhagavad Gita*
+# --- To Judge Emotions ---
+cd Emotion-Detection
+# Follow the README inside this folder...
