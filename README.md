@@ -49,7 +49,7 @@ To perceive emotions that often fleet across a face in milliseconds, AI-Yama uti
 ## ⚡ Instant Insight (Using Pre-Trained Model)
 If you wish to test the Seer immediately without retraining the neural pathways:
 
-Ensure `emotion_model.h5` (or `.keras`) is in your directory and run:
+Ensure `Emotion_model.keras` is in your directory and run:
 
 ```python
 import tensorflow as tf
@@ -69,7 +69,7 @@ except Exception as e:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/lovevyas/AI-Yama-Emotion.git](https://github.com/lovevyas/AI-Yama-Emotion.git)
+git clone [https://github.com/lovevyas/AI-Yama.git]
 cd AI-Yama-Emotion
 ```
 
