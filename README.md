@@ -79,14 +79,14 @@ pip install tensorflow pandas numpy matplotlib opencv-python
 ```
 
 ### 3. Run the Ritual
-Open the notebook `Emotion_Detection.ipynb` in **Google Colab**.
+Open the notebook `Emotion_Detection_Code.ipynb` in **Google Colab**.
 * **Training:** Run the training cells to teach Yama using the FER-2013 dataset.
 * **Live Judgment:** Execute the final **Webcam Bridge** cell to see your emotions classified in real-time video.
 
 ---
 
 ## 📊 Performance Metrics
-* **Training Accuracy:** ~75% (State-of-the-art for FER-2013 raw data is typically 70-75%).
+* **Training Accuracy:** ~70% (State-of-the-art for FER-2013 raw data is typically 70-75%).
 * **Real-Time Latency:** < 50ms per frame.
 
 ---
