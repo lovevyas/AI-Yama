@@ -5,6 +5,7 @@
 ![Project Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/Suite-Deep%20Learning-orange)
+🔗 **Live Demo:** [Click Here ](https://ai-yama-web.vercel.app/)
 
 ---
 
